@@ -1,0 +1,174 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--dark-alt);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30px 70px;
+}
+.heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+form {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: var(--light);
+  padding: 7px;
+  border: 2px solid var(--secondary);
+  border-radius: 50px;
+  overflow: hidden;
+  gap: 10px;
+}
+form input {
+  width: calc(100% - 60px);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 300;
+}
+form button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s ease all;
+}
+form button:hover {
+  background: var(--dark-alt);
+}
+.todos {
+  width: 40%;
+  margin: 50px auto 0;
+}
+.list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.list .item.completed {
+  background: var(--secondary);
+}
+.list .item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  background: var(--light);
+  padding: 15px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.list .item .complete-btn,
+.list .item .remove-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list .item .complete-btn {
+  background: var(--dark);
+  color: var(--light);
+}
+.list .item .remove-btn {
+  background: var(--primary);
+  color: var(--light);
+}
+.list .item .complete-btn i,
+.list .item .remove-btn i {
+  pointer-events: none;
+}
+.list .item span {
+  width: calc(100% - 95px);
+  text-transform: capitalize;
+}
